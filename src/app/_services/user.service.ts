@@ -19,7 +19,7 @@ export class UserService {
             .post(UserService.BaseUrl + "allfriends", data, httpOptions)
             .pipe(
                 map((response: Response) => {
-                  console.log(response);
+                    console.log(response);
                     return response;
                 })
             );
@@ -29,14 +29,42 @@ export class UserService {
             .get(UserService.BaseUrl + "allfriends", httpOptions)
             .pipe(map((response: Response) => response.json()));
     }
-    deleteAppointment(id)
-  {
-    return this.http.delete(UserService.BaseUrl+"allfriends/"+id,httpOptions);
-  }
-  getOneAppointment(id: number) {
-    return this.http.get(UserService.BaseUrl+"allfriends/"+id,httpOptions).pipe(map((response:Response)=>response.json()));
-  }
-  editAppointment(app){
-    return this.http.patch(UserService.BaseUrl+"allfriends/"+app.id, app);
-  }
+    deleteAppointment(id) {
+        return this.http.delete(
+            UserService.BaseUrl + "allfriends/" + id,
+            httpOptions
+        );
+    }
+    getOneAppointment(id: number) {
+        return this.http
+            .get(UserService.BaseUrl + "allfriends/" + id, httpOptions)
+            .pipe(map((response: Response) => response.json()));
+    }
+    editAppointment(app) {
+        return this.http.patch(
+            UserService.BaseUrl + "allfriends/" + app.id,
+            app
+        );
+    }
+
+    postContact(data) {
+        return this.http
+            .post(UserService.BaseUrl + "contactinfo", data, httpOptions)
+            .pipe(
+                map((response: Response) => {
+                    return response;
+                })
+            );
+    }
+    getAllContacts() {
+        return this.http
+            .get(UserService.BaseUrl + "contactinfo", httpOptions)
+            .pipe(map((response: Response) => response.json()));
+    }
+    deleteContact(id) {
+        return this.http.delete(
+            UserService.BaseUrl + "contactinfo/" + id,
+            httpOptions
+        );
+    }
 }

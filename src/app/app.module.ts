@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {ToastrModule} from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -26,12 +25,12 @@ import { EditAppointmentComponent } from './edit-appointment/edit-appointment.co
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,BrowserAnimationsModule,ToastrModule.forRoot()
+    HttpModule,BrowserAnimationsModule,
   ],
   exports: [ViewAppointmentComponent,
     PlaceFitnessTrainerAppointmentComponent,
     ContactUsComponent,
-    LandingPageComponent,ToastrModule
+    LandingPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -380,5 +380,23 @@
       "packages": "1000",
       "id": 96
     }
+  ],
+  "contactinfo": [
+    {
+      "firstname": "Prateek",
+      "lastname": "Ganguly",
+      "phonenumber": 22211112222,
+      "email": "test@test.com",
+      "message": "gbssdfgsfg",
+      "id": 1
+    },
+    {
+      "firstname": "gaurav",
+      "lastname": "thapliyal",
+      "phonenumber": 99887761,
+      "email": "test@test.com",
+      "message": "I need a big trainer",
+      "id": 2
+    }
   ]
 }

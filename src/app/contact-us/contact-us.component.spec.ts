@@ -9,6 +9,7 @@ import {
 import { RouterTestingModule } from "@angular/router/testing";
 import { HttpModule } from "@angular/http";
 import { UserService } from "../_services";
+import { ToastrService } from 'ngx-toastr';
 describe("ContactUsComponent", () => {
     let component: ContactUsComponent;
     let fixture: ComponentFixture<ContactUsComponent>;
@@ -22,7 +23,7 @@ describe("ContactUsComponent", () => {
                 HttpModule,
                 RouterTestingModule,
             ],
-            providers: [UserService],
+            providers: [UserService, ToastrService],
         }).compileComponents();
     }));
 
